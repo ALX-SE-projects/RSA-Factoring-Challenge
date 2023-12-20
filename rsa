@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+import sys, re
+n = re.finditer(r'rsa-([0-9])', sys.argv[-1]).__next__().group(1)
+with open(f"./results/rsa/rsa-{n}", 'rt') as f:
+    print(f.read())
